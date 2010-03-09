@@ -1,6 +1,44 @@
 = sinatra-path
 
-Description goes here.
+== Installation
+
+  sudo gem install sinatra-path
+
+== Example
+
+  require 'sinatra'
+  require 'sinatra/path'
+  
+  path '/' do
+    get do
+      'Hello World | <a href="/~signin">signin</a>'
+    end
+  end
+  
+  path '/~signin' do
+    get do
+      '
+        <html>
+        <head>
+          <title>signin</title>
+        </head>
+        <body>
+          <form action="" method="post">
+            <label for="user">User:</label>
+            <input type="text" id="user" name="user" value="" />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" value="" />
+            <input type="submit" name="submit" />
+          </form>
+        </body>
+        </html>
+      '
+    end
+  
+    post do
+      p params
+    end
+  end
 
 == Note on Patches/Pull Requests
  
