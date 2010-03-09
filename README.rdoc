@@ -9,10 +9,8 @@
   require 'sinatra'
   require 'sinatra/path'
   
-  path '/' do
-    get do
-      'Hello World | <a href="/~signin">signin</a>'
-    end
+  get '/' do
+    'Hello World | <a href="/~signin">signin</a>'
   end
   
   path '/~signin' do
