@@ -11,6 +11,7 @@ begin
     gem.homepage = "http://github.com/JunKikuchi/sinatra-path"
     gem.authors = ["Jun Kikuchi"]
     gem.add_development_dependency "shoulda", ">= 0"
+    gem.add_development_dependency "rack-test", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
